@@ -12,25 +12,20 @@ def homepage():
 @app.route("/predict", methods=['POST', 'GET'])
 @app.route("/predict")
 def predict():
-    if request.method == 'POST':
-        
-        
-        all_column=needColumn.copy()
-        all_column.insert(15,"veil-type")
-        Gotvalues=[]
-        for col in all_column:
-            Gotvalues.append(request.form[col])
-        Gotvalues.pop(15)
-        val=pipeline.predict(np.array(Gotvalues).reshape(1,-1))
-        result="Something Wrong!"
-        if val[0]=='e':
-            result="This mushroom is edible"
-        else:
-            result="This mushroom is poison"
-        
-        return  render_template('predict.html',r=result)
-    else:
+    if request.method != 'POST':
         return render_template("error.html")
+    all_column=needColumn.copy()
+    all_column.insert(15,"veil-type")
+    Gotvalues = [request.form[col] for col in all_column]
+    Gotvalues.pop(15)
+    val=pipeline.predict(np.array(Gotvalues).reshape(1,-1))
+    result="Something Wrong!"
+    if val[0]=='e':
+        result="This mushroom is edible"
+    else:
+        result="This mushroom is poison"
+
+    return  render_template('predict.html',r=result)
 
 if __name__ == "__main__":
     app.run(debug=True)

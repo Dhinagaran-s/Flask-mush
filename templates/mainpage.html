@@ -46,71 +46,261 @@
     <p style="font-size: 20px"> Enter details about mushroom</details></p>
     <form  action= "predict" method="POST" >
              
-<label>1. cap-shape: bell=b,conical=c,convex=x,flat=f, knobbed=k,sunken=s </label> 
-<input type="text" class="input" placeholder="b" name="cap-shape" value="b"><br>
+      <label>1. cap-shape : </label> 
+      <select name="cap-shape">
+        <option value="b">Bell</option>
+        <option value="c">Conical</option>
+        <option value="x">Convex</option>
+        <option value="f">Flat</option>
+        <option value="k">Knobbed</option>
+        <option value="s">Sunken</option>
+      </select>
+        
+      <br>
 
-<label>2. cap-surface: fibrous=f,grooves=g,scaly=y,smooth=s </label> 
-<input type="text" class="input" placeholder="f" name="cap-surface" value="f"><br>
+      <label>2. cap-surface : </label> 
+      <select name="cap-surface">
+        <option value="f">Fibrous</option>
+        <option value="g">Grooves</option>
+        <option value="y">Scaly</option>
+        <option value="s">Smooth</option>
+      </select>  
+        
+      <br>
 
-<label>3. cap-color: brown=n,buff=b,cinnamon=c,gray=g,green=r,pink=p,purple=u,red=e,white=w,yellow=y</label> 
-<input type="text" class="input" placeholder="c" name="cap-color" value="c"><br>
+      <label>3. cap-color : </label> 
+      <select name="cap-color">
+        <option value="n">Brown</option>
+        <option value="b">Buff</option>
+        <option value="c">Cinnamon</option>
+        <option value="g">Gray</option>
+        <option value="r">Green</option>
+        <option value="p">Pink</option>
+        <option value="u">Purple</option>
+        <option value="e">Red</option>
+        <option value="w">White</option>
+        <option value="y">Yellow</option>
+      </select>  
+        
+      <br>
 
-<label>4. bruises: bruises=t,no=f</label>
-<input type="text" class="input" placeholder="t" name="bruises" value="t"><br>
+      <label>4. bruises : </label>
+      <select name="bruises">
+        <option value="t">Bruises</option>
+        <option value="f">No</option>
+      </select>  
+        
+      <br>
 
-<label>5. odor: almond=a,anise=l,creosote=c,fishy=y,foul=f,musty=m,none=n,pungent=p,spicy=s</label> 
-<input type="text" class="input" placeholder="a" name="odor" value="a"><br>
+      <label>5. odor : </label> 
+      <select name="odor">
+        <option value="a">Almond</option>
+        <option value="l">Anisel</option>
+        <option value="c">Creosote</option>
+        <option value="y">Fishy</option>
+        <option value="f">Foul</option>
+        <option value="m">Musty</option>
+        <option value="p">Pungent</option>
+        <option value="s">Spicy</option>
+        <option value="n">None</option>
+      </select>  
 
-<label>6. gill-attachment: attached=a,descending=d,free=f,notched=n</label>
-<input type="text" class="input" placeholder="a" name="gill-attachment" value="a"><br>
+      <br>
 
-<label>7. gill-spacing: close=c,crowded=w,distant=d</label>
-<input type="text" class="input" placeholder="c" name="gill-spacing" value="c"><br>
+      <label>6. gill-attachment : </label>
+      <select name="gill-attachment">
+        <option value="a">Attached</option>
+        <option value="d">Descending</option>
+        <option value="f">Free</option>
+        <option value="n">Notched</option>
+      </select>  
+        
+      <br>
 
-<label>8. gill-size: broad=b,narrow=n</label>
-<input type="text" class="input" placeholder="b" name="gill-size" value="b"><br>
+      <label>7. gill-spacing : </label>
+      <select name="gill-spacing">
+        <option value="c">Close</option>
+        <option value="w">Crowded</option>
+        <option value="d">Distant</option>
+      </select>
 
-<label>9. gill-color: black=k,brown=n,buff=b,chocolate=h,gray=g, green=r,orange=o,pink=p,purple=u,red=e,white=w,yellow=y</label> 
-<input type="text" class="input" placeholder="n" name="gill-color" value="n"><br>
+      <br>
 
-<label>10. stalk-shape: enlarging=e,tapering=t</label>
-<input type="text" class="input" placeholder="t" name="stalk-shape" value="t"><br>
+      <label>8. gill-size : </label>
+      <select name="gill-size">
+        <option value="b">Broad</option>
+        <option value="n">Narrow</option>
+      </select>
+        
+      <br>
 
-<label>11. stalk-root: bulbous=b,club=c,cup=u,equal=e,rhizomorphs=z,rooted=r,missing=?</label> 
-<input type="text" class="input" placeholder="b" name="stalk-root" value="b"><br>
+      <label>9. gill-color : </label> 
+      <select name="gill-color">
+        <option value="k">Black</option>
+        <option value="n">Brown</option>
+        <option value="b">Buff</option>
+        <option value="h">Chocolate</option>
+        <option value="g">Gray</option>
+        <option value="r">Green</option>
+        <option value="o">Orange</option>
+        <option value="p">Pink</option>
+        <option value="u">Purple</option>
+        <option value="e">Red</option>
+        <option value="w">White</option>
+        <option value="y">Yellow</option>
+      </select>  
 
-<label>12. stalk-surface-above-ring: fibrous=f,scaly=y,silky=k,smooth=s</label> 
-<input type="text" class="input" placeholder="f" name="stalk-surface-above-ring" value="f"><br>
+      <br>
 
-<label>13. stalk-surface-below-ring: fibrous=f,scaly=y,silky=k,smooth=s</label> 
-<input type="text" class="input" placeholder="y" name="stalk-surface-below-ring" value="y"><br>
+      <label>10. stalk-shape : </label>
+      <select name="stalk-shape">
+        <option value="e">Enlarging</option>
+        <option value="t">Tapering</option>
+      </select>
+        
+      <br>
 
-<label>14. stalk-color-above-ring: brown=n,buff=b,cinnamon=c,gray=g,orange=o,pink=p,red=e,white=w,yellow=y</label> 
-<input type="text" class="input" placeholder="g" name="stalk-color-above-ring" value="g"><br>
+      <label>11. stalk-root : </label> 
+      <select name="stalk-root">
+        <option value="b">Bulbous</option>
+        <option value="c">Club</option>
+        <option value="u">Cup</option>
+        <option value="e">Equal</option>
+        <option value="z">Rhizomorphs</option>
+        <option value="r">Rooted</option>
+        <option value="?">Missing</option>
+      </select>
+        
+      <br>
 
-<label>15. stalk-color-below-ring: brown=n,buff=b,cinnamon=c,gray=g,orange=o,pink=p,red=e,white=w,yellow=y </label> 
-<input type="text" class="input" placeholder="w" name="stalk-color-below-ring" value="w"><br>
+      <label>12. stalk-surface-above-ring : </label> 
+      <select name="stalk-surface-above-ring">
+        <option value="f">Fibrous</option>
+        <option value="y">Scaly</option>
+        <option value="k">Silky</option>
+        <option value="s">Smooth</option>
+      </select>  
 
-<label>16. veil-type: partial=p,universal=u </label> 
-<input type="text" class="input" placeholder="u" name="veil-type" value="u"><br>
+      <br>
 
-<label>17. veil-color: brown=n,orange=o,white=w,yellow=y</label> 
-<input type="text" class="input" placeholder="o" name="veil-color" value="o"><br>
+      <label>13. stalk-surface-below-ring : </label> 
+      <select name="stalk-surface-below-ring">
+        <option value="f">Fibrous</option>
+        <option value="y">Scaly</option>
+        <option value="k">Silky</option>
+        <option value="s">Smooth</option>
+      </select>
+        
+      <br>
 
-<label>18. ring-number: none=n,one=o,two=t</label> 
-<input type="text" class="input" placeholder="t" name="ring-number" value="t"><br>
+      <label>14. stalk-color-above-ring : </label> 
+      <select name="stalk-color-above-ring">
+        <option value="n">Brown</option>
+        <option value="b">Buff</option>
+        <option value="c">Cinnamon</option>
+        <option value="g">Gray</option>
+        <option value="o">Orange</option>
+        <option value="p">Pink</option>
+        <option value="e">Red</option>
+        <option value="w">White</option>
+        <option value="y">Yellow</option>
+      </select>
+        
+      <br>
 
-<label>19. ring-type: cobwebby=c,evanescent=e,flaring=f,large=l,none=n,pendant=p,sheathing=s,zone=z</label> 
-<input type="text" class="input" placeholder="c" name="ring-type" value="c"><br>
+      <label>15. stalk-color-below-ring : </label> 
+      <select name="stalk-color-below-ring">
+        <option value="n">Brown</option>
+        <option value="b">Buff</option>
+        <option value="c">Cinnamon</option>
+        <option value="g">Gray</option>
+        <option value="o">Orange</option>
+        <option value="p">Pink</option>
+        <option value="e">Red</option>
+        <option value="w">White</option>
+        <option value="y">Yellow</option>
+      </select>
+        
+      <br>
 
-<label>20. spore-print-color: black=k,brown=n,buff=b,chocolate=h,green=r,orange=o,purple=u,white=w,yellow=y</label> 
-<input type="text" class="input" placeholder="k" name="spore-print-color" value="k"><br>
+      <label>16. veil-type : </label> 
+      <select name="veil-type">
+        <option vlaue="p">Partial</option>
+        <option vlaue="u">Universal</option>
+      </select>
 
-<label>21. population: abundant=a,clustered=c,numerous=n,scattered=s,several=v,solitary=y</label> 
-<input type="text" class="input" placeholder="s" name="population" value="s"><br>
+      <br>
 
-<label>22. habitat: grasses=g,leaves=l,meadows=m,paths=p,urban=u,waste=w,woods=d</label> 
-<input type="text" class="input" placeholder="l" name="habitat" value="l"><br>
+      <label>17. veil-color : </label> 
+      <select name="veil-color">
+        <option value="n">Brown</option>
+        <option value="o">Orange</option>
+        <option value="w">White</option>
+        <option value="y">Yellow</option>
+      </select>
+      <br>
+
+      <label>18. ring-number : </label> 
+      <select name="ring-number">
+        <option value="o">One</option>
+        <option value="t">Two</option>
+        <option value="n">None</option>
+      </select>
+
+      <br>
+
+      <label>19. ring-type : </label> 
+      <select name="ring-type">
+        <option value="c">Cobwebby</option>
+        <option value="e">Evanescent</option>
+        <option value="f">Flaring</option>
+        <option value="l">Large</option>
+        <option value="p">Pendant</option>
+        <option value="s">Sheathings</option>
+        <option value="z">Zone</option>
+        <option value="n">None</option>
+      </select>  
+
+      <br>
+
+      <label>20. spore-print-color : </label> 
+      <select name="spore-print-color">
+        <option value="k">Black</option>
+        <option value="n">Brown</option>
+        <option value="b">Buff</option>
+        <option value="h">Chocolate</option>
+        <option value="g">Green</option>
+        <option value="o">Orange</option>
+        <option value="u">Purple</option>
+        <option value="w">White</option>
+        <option value="y">Yellow</option>
+      </select>  
+
+      <br>
+
+      <label>21. population : </label> 
+      <select name="population">
+        <option value="a">Abundant</option>
+        <option value="c">Clustered</option>
+        <option value="n">Numerous</option>
+        <option value="s">Scattered</option>
+        <option value="v">Several</option>
+        <option value="y">Solitary</option>
+
+      </select>
+
+      <br>
+
+      <label>22. habitat : </label> 
+      <select name="habitat">
+        <option value="g">Grasses</option>
+        <option value="l">Leaves</option>
+        <option value="m">Meadows</option>
+        <option value="p">Paths</option>
+        <option value="u">Urban</option>
+        <option value="w">Waste</option>
+        <option value="d">Woods</option>
+      </select>
 
 
       
