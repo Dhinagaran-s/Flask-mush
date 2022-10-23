@@ -25,7 +25,7 @@ python -m venv env
 ### Activate environment
 - LINUX
     - Activate the created virtural environment to use it.
-        ```python
+        ```bash
         source env/bin/activate
         ```
 
