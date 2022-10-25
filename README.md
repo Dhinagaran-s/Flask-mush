@@ -1,4 +1,9 @@
-## INeuron-mushroom-project
+## iNeuron-mushroom-project
+
+### Test the Deployed Application
+- The application is hosted in the [Heroku](https://mush-application.herokuapp.com/)
+
+
 ### Software and Tools that i have used for this project
 
 1. [GitHub](https://github.com/)
