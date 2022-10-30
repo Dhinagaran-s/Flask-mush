@@ -4,13 +4,24 @@ import pickle
 app = Flask(__name__)
 needColumn=pickle.load(open("ModelCreation/needColumn.pkl","rb"))
 pipeline=pickle.load(open("ModelCreation/pipeline.pkl","rb"))
-@app.route('/')
-@app.route('/Home')
-def homepage():
-    return render_template('mainpage.html')
 
-@app.route("/predict", methods=['POST', 'GET'])
-@app.route("/predict")
+
+@app.route('/')
+@app.route('/home')
+def homepage():
+    return render_template('home.html')
+
+@app.route('/predict')
+def predict_page():
+    return render_template('predict.html')
+
+@app.route('/about')
+def about_page():
+    return render_template('about.html')
+
+
+@app.route("/output", methods=['POST', 'GET'])
+@app.route("/output")
 def predict():
     if request.method != 'POST':
         return render_template("error.html")
@@ -25,7 +36,7 @@ def predict():
     else:
         result="This mushroom is poison"
 
-    return  render_template('predict.html',r=result)
+    return  render_template('output.html',r=result)
 
 if __name__ == "__main__":
     app.run(debug=True)
