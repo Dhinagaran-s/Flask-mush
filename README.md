@@ -4,15 +4,11 @@
 - The application is hosted in the [Heroku](https://mush-application.herokuapp.com/)
 
 ### Demo video for this Application
+Youtube Link : https://youtu.be/hagoR-PmKCs
 
-<iframe 
-    width="560" 
-    height="315" 
-    src="https://www.youtube.com/embed/hagoR-PmKCs" 
-    title="YouTube video player" 
-    frameborder="0" 
-    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
-</iframe>
+https://user-images.githubusercontent.com/73994285/198873586-84828aec-873c-419f-95e0-8bce9055710b.mp4
+
+
 
 
 ### Software and Tools that i have used for this project
@@ -27,6 +23,7 @@ git clone https://github.com/Dhinagaran-s/Flask-mush.git
 ```
 
 ### Navigate the Directory
+
 - Change your current working directory into the project directory
 ```bash
 cd Flask-mush
